@@ -1,0 +1,16 @@
+composer
+cd /usr/local/bin
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar composer
+composer
+
+
+sudo apt-get install php5-mcrypt
+sudo ln -s /etc/php5/conf.d/mcrypt.ini /etc/php5/mods-available/mcrypt.ini
+sudo php5enmod mcrypt
+
+a2enmod rewrite
+
+sudo service apache2 restart
+
+git clone git@github.com:kecorona/foobooks.git
